@@ -3,7 +3,7 @@ const config = require( '../config/db.config');
 
 class Database {
     constructor() {
-        this.connection = mysql.createPool( config );
+        this.connection = mysql.createConnection( config );
     }
     query( sql, args ) {
         return new Promise( ( resolve, reject ) => {
