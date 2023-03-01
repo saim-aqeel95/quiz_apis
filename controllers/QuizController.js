@@ -75,6 +75,7 @@ const getAllQuizes = (req,res) => {
           res.status(500).json({ success: false, error: [1030], data: null });
         }
     }).catch(error => {
+      console.log(error)
       res.status(500).json({ success: false, error: [1030], data: null });
     });
 }
